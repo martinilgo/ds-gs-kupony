@@ -14,5 +14,21 @@
     "discountType": "percent",
     "expiry": "6. 2. 2026",
     "updatedAt": "2026-02-03T09:23:27.898Z"
+  },
+  {
+    "title": "Speciální sleva - FLASH5.",
+    "text": " Sleva 5% na vše.",
+    "countdown": true,
+    "active": true,
+    "bgColors": [
+      "#232526",
+      "#414345"
+    ],
+    "code": "FLASH5",
+    "store": "DesignShop Cz",
+    "discount": "5,00",
+    "discountType": "percent",
+    "expiry": "6. 2. 2026",
+    "updatedAt": "2026-02-03T09:30:33.948Z"
   }
 ]
