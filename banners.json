@@ -21,14 +21,14 @@
     "countdown": true,
     "active": true,
     "bgColors": [
-      "#232526",
-      "#414345"
+      "#222222",
+      "#222222"
     ],
     "code": "FLASH5",
     "store": "DesignShop Cz",
     "discount": "5,00",
     "discountType": "percent",
     "expiry": "5. 2. 2026",
-    "updatedAt": "2026-02-03T13:08:10.388Z"
+    "updatedAt": "2026-02-03T13:17:01.932Z"
   }
 ]
