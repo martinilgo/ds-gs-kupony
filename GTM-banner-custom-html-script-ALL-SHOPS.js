@@ -52,15 +52,15 @@
 
       var css = document.createElement('style');
       css.appendChild(document.createTextNode(
-        '#promoBanner{position:fixed;top:0;left:0;right:0;color:#fff;padding:12px 40px 12px 20px;text-align:center;font-size:15px;z-index:999999;font-family:Arial,sans-serif;animation:promoBannerSlide .4s ease-out}' +
-        '@keyframes promoBannerSlide{from{transform:translateY(-100%)}to{transform:translateY(0)}}' +
-        '#promoBannerClose{position:absolute;right:12px;top:8px;cursor:pointer;font-size:18px;color:#fff}' +
-        '#promoBanner .coupon{background:#fff;color:#000;padding:3px 8px;border-radius:4px;font-weight:bold;margin-left:5px;cursor:pointer;display:inline-block}' +
-        '#promoBanner .copied{margin-left:8px;font-size:14px;color:#0f0;display:none}' +
-        '#promoCountdown{font-size:12px;color:rgba(255,255,255,0.7);margin-left:10px;animation:fadeBlink 3s ease-in-out infinite}' +
-        '.blinkColon{display:inline-block;animation:blink 1s infinite}' +
+        '#promoBanner{position:fixed;top:0;left:0;right:0;color:#fff;padding:8px 24px;text-align:center;font-size:13px;line-height:1.25;z-index:999999;font-family:Arial,sans-serif;animation:promoBannerSlide .4s ease-out}' +
+        '@keyframes promoBannerSlide{from{transform:translateY(-90%)}to{transform:translateY(0)}}' +
+        '#promoBannerClose{position:absolute;right:10px;top:6px;cursor:pointer;font-size:18px;color:#fff}' +
+        '#promoBanner .coupon{background:#fff;color:#000;padding:2px 6px;border-radius:4px;font-weight:bold;margin-left:5px;cursor:pointer;display:inline-block;font-size:12px}' +
+        '#promoBanner .copied{margin-left:6px;font-size:11px;color:#0f0;display:none}' +
+        '#promoCountdown{font-size:11px;color:rgba(255,255,255,0.8);margin-left:10px;animation:fadeBlink 6s ease-in-out infinite}' +
+        '.blinkColon{display:inline-block;animation:blink 1.5s infinite}' +
         '@keyframes blink{0%{opacity:1}50%{opacity:0}100%{opacity:1}}' +
-        '@keyframes fadeBlink{0%{opacity:1}50%{opacity:0.5}100%{opacity:1}}'
+        '@keyframes fadeBlink{0%{opacity:1}50%{opacity:0.4}100%{opacity:1}}'
       ));
       document.head.appendChild(css);
 
@@ -71,7 +71,7 @@
         '<span id="promoBannerClose">&#10006;</span>' +
         (banner.title ? banner.title : '') +
         (banner.text ? ' ' + banner.text : '') +
-        ' <strong>Kód:</strong> ' +
+        ' Kód:' +
         '<span class="coupon" id="couponBtn">' + banner.code + '</span>' +
         '<span id="copyMsg" class="copied">Skopírované!</span>' +
         (banner.countdown ? '<span id="promoCountdown"></span>' : '');
