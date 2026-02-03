@@ -1,18 +1,1 @@
-[
-  {
-    "title": "Špeciálna zľava DesignShop SK",
-    "text": "Využite zľavový kód pri nákupe. Platnosť do: 4. 3. 2026",
-    "countdown": true,
-    "active": true,
-    "bgColors": [
-      "#232526",
-      "#414345"
-    ],
-    "code": "NEW-DS-SKs",
-    "store": "DesignShop Sk",
-    "discount": "10,00",
-    "discountType": "currency",
-    "expiry": "4. 3. 2026",
-    "updatedAt": "2026-02-03T08:12:29.034Z"
-  }
-]
+[]
