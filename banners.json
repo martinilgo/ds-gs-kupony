@@ -1,18 +1,18 @@
 [
   {
     "title": "Špeciálna zľava - FLASH5",
-    "text": "Zľava 5% na všeko do: 8. 3. 2026",
+    "text": "Zľava 5% na všetko do: 8. 3. 2026",
     "countdown": true,
     "active": true,
     "bgColors": [
-      "#f5515f",
-      "#a1051d"
+      "#232526",
+      "#414345"
     ],
     "code": "FLASH5",
     "store": "DesignShop Sk",
     "discount": "5,00",
     "discountType": "percent",
     "expiry": "8. 3. 2026",
-    "updatedAt": "2026-02-03T08:39:14.331Z"
+    "updatedAt": "2026-02-03T08:39:29.068Z"
   }
 ]
