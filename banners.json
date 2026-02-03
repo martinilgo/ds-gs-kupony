@@ -1,7 +1,7 @@
 [
   {
     "title": "Špeciálna zľava - FLASH5",
-    "text": "Využite zľavový kód pri nákupe. Platnosť do: 8. 3. 2026",
+    "text": "Zľava 5% na všeko do: 8. 3. 2026",
     "countdown": true,
     "active": true,
     "bgColors": [
@@ -13,6 +13,6 @@
     "discount": "5,00",
     "discountType": "percent",
     "expiry": "8. 3. 2026",
-    "updatedAt": "2026-02-03T08:33:26.316Z"
+    "updatedAt": "2026-02-03T08:36:17.850Z"
   }
 ]
