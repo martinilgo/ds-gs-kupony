@@ -5,14 +5,14 @@
     "countdown": true,
     "active": true,
     "bgColors": [
-      "#232526",
-      "#414345"
+      "#f5515f",
+      "#a1051d"
     ],
     "code": "FLASH5",
     "store": "DesignShop Sk",
     "discount": "5,00",
     "discountType": "percent",
     "expiry": "8. 3. 2026",
-    "updatedAt": "2026-02-03T08:40:17.135Z"
+    "updatedAt": "2026-02-03T08:41:42.442Z"
   }
 ]
