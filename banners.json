@@ -16,8 +16,8 @@
     "updatedAt": "2026-02-03T09:36:53.765Z"
   },
   {
-    "title": "Speciální sleva - FLASH5.",
-    "text": " Sleva 5% na vše.",
+    "title": "Speciální sleva 5% na vše.",
+    "text": "",
     "countdown": true,
     "active": true,
     "bgColors": [
@@ -29,6 +29,6 @@
     "discount": "5,00",
     "discountType": "percent",
     "expiry": "6. 2. 2026",
-    "updatedAt": "2026-02-03T09:36:09.244Z"
+    "updatedAt": "2026-02-03T09:37:11.810Z"
   }
 ]
