@@ -74,19 +74,20 @@
       var rotatorCss = '';
       if (textLines.length) {
         if (banner.title) textLines.unshift(banner.title);
+        var totalDuration = rotationSpeed * textLines.length;
 
         if (rotationEffect === 'fade') {
           var fadeItems = textLines.map(function(line, idx) {
-            var delay = (idx * rotationSpeed / textLines.length).toFixed(1);
+            var delay = (idx * rotationSpeed).toFixed(1);
             return '<span class="banner-fade-item" style="animation-delay:' + delay + 's">' + line + '</span>';
           }).join('');
           rotatorHtml = '<span class="banner-text-rotator">' + fadeItems + '</span>';
           var showPct = 100 / textLines.length;
-          var fadeIn = Math.min(8, showPct * 0.15);
+          var fadePct = showPct * 0.2;
           rotatorCss =
             '.banner-text-rotator{display:inline-grid;vertical-align:middle;}' +
-            '.banner-fade-item{grid-area:1/1;white-space:nowrap;line-height:1.3;font-size:13px;font-weight:600;opacity:0;animation:bannerFadeItem ' + rotationSpeed + 's ease-in-out infinite}' +
-            '@keyframes bannerFadeItem{0%{opacity:0}' + fadeIn.toFixed(1) + '%{opacity:1}' + (showPct - fadeIn).toFixed(1) + '%{opacity:1}' + showPct.toFixed(1) + '%{opacity:0}100%{opacity:0}}';
+            '.banner-fade-item{grid-area:1/1;white-space:nowrap;line-height:1.3;font-size:13px;font-weight:600;opacity:0;animation:bannerFadeItem ' + totalDuration + 's linear infinite}' +
+            '@keyframes bannerFadeItem{0%{opacity:0}' + fadePct.toFixed(1) + '%{opacity:1}' + (showPct - fadePct).toFixed(1) + '%{opacity:1}' + (showPct + fadePct).toFixed(1) + '%{opacity:0}100%{opacity:0}}';
         } else {
           var inner = textLines.map(function(line) {
             return '<div>' + line + '</div>';
@@ -110,7 +111,7 @@
           }
           rotatorCss =
             '.banner-text-rotator{display:inline-block;vertical-align:middle;overflow:hidden;height:17px;}' +
-            '.banner-text-rotator-inner{display:flex;flex-direction:column;animation:bannerTextScroll ' + rotationSpeed + 's ease-in-out infinite;}' +
+            '.banner-text-rotator-inner{display:flex;flex-direction:column;animation:bannerTextScroll ' + totalDuration + 's ease-in-out infinite;}' +
             '.banner-text-rotator-inner div{line-height:1.3;font-size:13px;font-weight:600;}' +
             scrollKf;
         }
