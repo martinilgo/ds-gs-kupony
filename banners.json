@@ -34,7 +34,7 @@
       "fontSize": "13px",
       "borderRadius": "3px",
       "height": "auto",
-      "rotationSpeed": 5,
+      "rotationSpeed": 6,
       "rotationEffect": "fade"
     },
     "gtmSnippet": "<script src=\"https://raw.githack.com/martinilgo/ds-gs-kupony/main/GTM-banner-custom-html-script-ALL-SHOPS.js\"></script>",
@@ -43,6 +43,6 @@
     "discount": "5,00",
     "discountType": "percent",
     "expiry": "5. 2. 2026",
-    "updatedAt": "2026-02-04T18:04:18.710Z"
+    "updatedAt": "2026-02-04T18:04:58.879Z"
   }
 ]
