@@ -35,8 +35,8 @@
     "countdown": true,
     "active": true,
     "bgColors": [
-      "#99cc33",
-      "#7ea924"
+      "#222222",
+      "#111111"
     ],
     "rotatingText": [
       "Doprava zdarma."
@@ -57,6 +57,6 @@
     "discount": "5,00",
     "discountType": "percent",
     "expiry": "5. 2. 2026",
-    "updatedAt": "2026-02-04T19:29:55.464Z"
+    "updatedAt": "2026-02-04T19:43:17.862Z"
   }
 ]
