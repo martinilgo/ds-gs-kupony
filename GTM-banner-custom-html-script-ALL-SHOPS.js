@@ -145,7 +145,7 @@
 
       var css = document.createElement('style');
       css.appendChild(document.createTextNode(
-        '#promoBanner{position:fixed;left:0;right:0;color:' + textColor + ';padding:6px 24px;text-align:center;font-size:' + fontSize + ';line-height:1.3;z-index:999999;font-family:' + fontFamily + ';border-radius:' + borderRadius + ';animation:promoBannerSlide .4s ease-out;display:flex;align-items:center;justify-content:center;gap:5px;border:0;box-shadow:none;border-bottom:none;}' +
+        '#promoBanner{position:fixed;left:0;right:0;color:' + textColor + ';padding:6px 24px;text-align:center;font-size:' + fontSize + ';line-height:1.3;z-index:999999;font-family:' + fontFamily + ';border-radius:' + borderRadius + ';animation:promoBannerSlide .4s ease-out;display:flex;align-items:center;justify-content:center;gap:5px;border:0 !important;box-shadow:none !important;border-bottom:0 !important;}' +
         '@keyframes promoBannerSlide{from{transform:translateY(-90%)}to{transform:translateY(0)}}' +
         '#promoBannerClose{position:absolute;right:10px;top:6px;cursor:pointer;font-size:18px;color:#fff}' +
         '#promoBanner .coupon{background:#fff;color:#000;padding:2px 6px;border-radius:4px;font-weight:bold;margin-left:5px;cursor:pointer;display:inline-block;font-size:12px}' +
@@ -179,6 +179,8 @@
         el.style.minHeight = heightStyle;
         el.style.height = 'auto';
       }
+      el.style.border = '0';
+      el.style.boxShadow = 'none';
       function applyPopupPosition(pos) {
         el.style.bottom = '20px';
         el.style.top = 'auto';
