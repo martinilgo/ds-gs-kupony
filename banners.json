@@ -36,7 +36,7 @@
       "height": "auto",
       "rotationSpeed": 3
     },
-    "gtmSnippet": "<script src=\"https://cdn.statically.io/gh/martinilgo/ds-gs-kupony/main/GTM-banner-custom-html-script-ALL-SHOPS.js\"></script>",
+    "gtmSnippet": "<script src=\"https://raw.githack.com/martinilgo/ds-gs-kupony/main/GTM-banner-custom-html-script-ALL-SHOPS.js\"></script>",
     "code": "FLASH5",
     "store": "DesignShop Cz",
     "discount": "5,00",
