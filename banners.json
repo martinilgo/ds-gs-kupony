@@ -39,11 +39,25 @@
       "#222222",
       "#222222"
     ],
+    "rotatingText": [
+      "Doprava zdarma."
+    ],
+    "bannerType": "topbar",
+    "popupPosition": "bottom-center",
+    "bannerStyle": {
+      "textColor": "#FFFFFF",
+      "fontSize": "13px",
+      "borderRadius": "3px",
+      "height": "auto",
+      "rotationSpeed": 3
+    },
+    "gtmSnippet": "<script src=\"https://cdn.jsdelivr.net/gh/martinilgo/ds-gs-kupony@main/ds-gs-kupony/GTM-banner-custom-html-script-ALL-SHOPS.js\"></script>",
     "code": "FLASH5",
     "store": "DesignShop Cz",
     "discount": "5,00",
     "discountType": "percent",
     "expiry": "5. 2. 2026",
+<<<<<<< HEAD
     "updatedAt": "2026-02-03T13:17:01.932Z",
     "bannerStyle": {
       "background": "#111111",
@@ -106,5 +120,8 @@
       "borderRadius": "6px",
       "fontSize": "14px"
     }
+=======
+    "updatedAt": "2026-02-04T10:03:13.009Z"
+>>>>>>> 317ee799106485dd36f35fd48cf0074258c36ae0
   }
 ]
