@@ -156,7 +156,8 @@
         '.banner-desc{opacity:0.9;}' +
         rotatorCss +
         '@keyframes blink{0%{opacity:1}50%{opacity:0}100%{opacity:1}}' +
-        '@keyframes fadeBlink{0%{opacity:1}50%{opacity:0.4}100%{opacity:1}}'
+        '@keyframes fadeBlink{0%{opacity:1}50%{opacity:0.4}100%{opacity:1}}' +
+        '#promoBanner,#promoBanner::before,#promoBanner::after,#promoBanner *{border:0!important;box-shadow:none!important;border-bottom:0!important;border-bottom-width:0!important;border-bottom-style:none!important;border-bottom-color:transparent!important;}'
       ));
       document.head.appendChild(css);
 
@@ -180,6 +181,7 @@
         el.style.height = 'auto';
       }
       el.style.border = '0';
+      el.style.borderBottom = '0';
       el.style.boxShadow = 'none';
       function applyPopupPosition(pos) {
         el.style.bottom = '20px';
