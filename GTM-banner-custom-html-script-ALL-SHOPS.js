@@ -8,6 +8,7 @@
 
   var currentStore = STORE_MAP[location.hostname];
   if (!currentStore) return;
+  var isCz = currentStore.indexOf('Cz') !== -1;
 
   var JSON_URL = 'https://raw.githubusercontent.com/martinilgo/ds-gs-kupony/main/banners.json';
   var STORAGE_PREFIX = 'promoBanner_closed_';
@@ -73,34 +74,33 @@
         var inner = textLines.map(function(line) {
           return '<div>' + line + '</div>';
         }).join('');
-        rotatorHtml = '<div class="banner-text-rotator" style="--rotation-duration:' + rotationSpeed + 's;"><div class="banner-text-rotator-inner">' + inner + '</div></div>';
+        rotatorHtml = '<span class="banner-text-rotator"><span class="banner-text-rotator-inner">' + inner + '</span></span>';
       }
-      var staticHtml = '';
-      if (!rotatorHtml) {
-        var staticLines = [];
-        if (banner.title) staticLines.push('<div class="banner-static-title">' + banner.title + '</div>');
-        if (banner.text) staticLines.push('<div class="banner-static-desc">' + banner.text + '</div>');
-        if (!staticLines.length) {
-          staticLines.push('<div class="banner-static-title">Zľava pre Vás!</div>');
-        }
-        staticHtml = '<div class="banner-static-text">' + staticLines.join('') + '</div>';
+      var titleHtml = '';
+      if (banner.title) {
+        titleHtml = '<span class="banner-title">' + banner.title + '</span>';
+      } else if (!rotatorHtml && !banner.text) {
+        titleHtml = '<span class="banner-title">' + (isCz ? 'Sleva pro Vás!' : 'Zľava pre Vás!') + '</span>';
+      }
+      var descHtml = '';
+      if (!rotatorHtml && banner.text) {
+        descHtml = '<span class="banner-desc">' + banner.text + '</span>';
       }
 
       var css = document.createElement('style');
       css.appendChild(document.createTextNode(
-        '#promoBanner{position:fixed;left:0;right:0; color:' + textColor + '; padding:8px 24px;text-align:center;font-size:' + fontSize + ';line-height:1.25;z-index:999999;font-family:' + fontFamily + ';height:' + heightStyle + ';border-radius:' + borderRadius + ';animation:promoBannerSlide .4s ease-out}' +
+        '#promoBanner{position:fixed;left:0;right:0;color:' + textColor + ';padding:6px 24px;text-align:center;font-size:' + fontSize + ';line-height:1.3;z-index:999999;font-family:' + fontFamily + ';border-radius:' + borderRadius + ';animation:promoBannerSlide .4s ease-out;display:flex;align-items:center;justify-content:center;gap:5px}' +
         '@keyframes promoBannerSlide{from{transform:translateY(-90%)}to{transform:translateY(0)}}' +
         '#promoBannerClose{position:absolute;right:10px;top:6px;cursor:pointer;font-size:18px;color:#fff}' +
         '#promoBanner .coupon{background:#fff;color:#000;padding:2px 6px;border-radius:4px;font-weight:bold;margin-left:5px;cursor:pointer;display:inline-block;font-size:12px}' +
         '#promoBanner .copied{margin-left:6px;font-size:11px;color:#0f0;display:none}' +
         '#promoCountdown{font-size:11px;color:rgba(255,255,255,0.8);margin-left:10px;animation:fadeBlink 6s ease-in-out infinite}' +
         '.blinkColon{display:inline-block;animation:blink 1.5s infinite}' +
-        '.banner-text-rotator{display:inline-block;vertical-align:middle;margin-left:8px;overflow:hidden;height:32px;}' +
+        '.banner-title{font-weight:600;margin-right:2px;}' +
+        '.banner-desc{opacity:0.9;}' +
+        '.banner-text-rotator{display:inline-block;vertical-align:middle;overflow:hidden;height:17px;}' +
         '.banner-text-rotator-inner{display:flex;flex-direction:column;animation:bannerTextScroll ' + rotationSpeed + 's ease-in-out infinite;}' +
         '.banner-text-rotator-inner div{line-height:1.3;font-size:13px;font-weight:600;}' +
-        '.banner-static-text{display:inline-flex;flex-direction:column;align-items:center;gap:4px;margin-left:8px;}' +
-        '.banner-static-title{font-size:14px;font-weight:600;}' +
-        '.banner-static-desc{font-size:12px;opacity:0.85;}' +
         '@keyframes bannerTextScroll{0%{transform:translateY(0);}40%{transform:translateY(0);}55%{transform:translateY(-100%);}95%{transform:translateY(-100%);}100%{transform:translateY(0);}}' +
         '@keyframes blink{0%{opacity:1}50%{opacity:0}100%{opacity:1}}' +
         '@keyframes fadeBlink{0%{opacity:1}50%{opacity:0.4}100%{opacity:1}}'
@@ -113,10 +113,10 @@
       el.style.borderRadius = borderRadius;
       el.innerHTML =
         '<span id="promoBannerClose">&#10006;</span>' +
-        (rotatorHtml || staticHtml) +
-        ' Kód:' +
+        titleHtml + (rotatorHtml || descHtml) +
+        ' Kód: ' +
         '<span class="coupon" id="couponBtn">' + banner.code + '</span>' +
-        '<span id="copyMsg" class="copied">Skopírované!</span>' +
+        '<span id="copyMsg" class="copied">' + (isCz ? 'Zkopírováno!' : 'Skopírované!') + '</span>' +
         (banner.countdown ? '<span id="promoCountdown"></span>' : '');
 
       el.style.color = textColor;
