@@ -227,4 +227,4 @@
       }
     })
     .catch(function(e){ console.warn('Promo banner error:', e); });
-})()
+})();
