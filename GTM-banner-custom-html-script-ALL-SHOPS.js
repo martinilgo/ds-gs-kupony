@@ -1,4 +1,4 @@
-function(){
+(function(){
   var STORE_MAP = {
     'www.design-shop.sk': 'DesignShop Sk',
     'www.design-shop.cz': 'DesignShop Cz',
@@ -227,4 +227,4 @@ function(){
       }
     })
     .catch(function(e){ console.warn('Promo banner error:', e); });
-}()
+})()
