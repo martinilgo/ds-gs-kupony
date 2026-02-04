@@ -210,7 +210,7 @@
 
       function updateCountdown(){
         if (!countdownEl || !endDate) return;
-        var diff = endDate - new.Date();
+        var diff = endDate - new Date();
         if (diff <= 0) { closeBanner(); clearInterval(timerId); return; }
         var d = Math.floor(diff / 86400000);
         var h = Math.floor((diff % 86400000) / 3600000);
