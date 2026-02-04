@@ -1,0 +1,14 @@
+name: Purge jsDelivr cache
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  purge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Purge jsDelivr cache
+        run: |
+          curl -s "https://purge.jsdelivr.net/gh/martinilgo/ds-gs-kupony@main/GTM-banner-custom-html-script-ALL-SHOPS.js"
+          curl -s "https://purge.jsdelivr.net/gh/martinilgo/ds-gs-kupony@main/banners.json"
