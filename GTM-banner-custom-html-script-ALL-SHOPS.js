@@ -269,10 +269,11 @@
         var d = Math.floor(diff / 86400000);
         var h = Math.floor((diff % 86400000) / 3600000);
         var m = Math.floor((diff % 3600000) / 60000);
+        var formattedMinutes = String(m).padStart(2, '0');
         countdownEl.innerHTML =
-          'Platí ' + d + 'd ' +
+          'Platí ' +
           h + '<span class="blinkColon">:</span>' +
-          m + 'm';
+          formattedMinutes + 'm';
       }
 
       if (banner.countdown && endDate) {
