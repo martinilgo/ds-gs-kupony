@@ -1,19 +1,33 @@
 [
   {
     "title": "Zľava 5% na všetko.",
-    "text": "Doprava zdarma.",
+    "text": "",
     "countdown": true,
     "active": true,
     "bgColors": [
       "#232526",
       "#232526"
     ],
+    "rotatingText": [
+      "Doprava zdarma."
+    ],
+    "bannerType": "topbar",
+    "popupPosition": "bottom-center",
+    "bannerStyle": {
+      "textColor": "#FFFFFF",
+      "fontSize": "13px",
+      "borderRadius": "6px",
+      "height": "auto",
+      "rotationSpeed": 6,
+      "rotationEffect": "fade"
+    },
+    "gtmSnippet": "<script src=\"https://raw.githack.com/martinilgo/ds-gs-kupony/main/GTM-banner-custom-html-script-ALL-SHOPS.js\"></script>",
     "code": "FLASH5",
     "store": "DesignShop Sk",
     "discount": "5,00",
     "discountType": "percent",
     "expiry": "6. 2. 2026",
-    "updatedAt": "2026-02-03T13:22:03.913Z"
+    "updatedAt": "2026-02-04T18:26:04.192Z"
   },
   {
     "title": "Sleva 5% na vše.",
