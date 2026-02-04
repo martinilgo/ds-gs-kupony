@@ -58,6 +58,7 @@
       var heightStyle = styleConfig.height || 'auto';
       var borderRadius = styleConfig.borderRadius || '6px';
       var rotationSpeed = styleConfig.rotationSpeed || 6;
+      var rotationEffect = styleConfig.rotationEffect || 'fade';
       var finalBackground = styleConfig.backgroundGradient || styleConfig.background || defaultBg;
 
       var textLines = [];
@@ -70,28 +71,49 @@
       }
 
       var rotatorHtml = '';
+      var rotatorCss = '';
       if (textLines.length) {
         if (banner.title) textLines.unshift(banner.title);
-        var inner = textLines.map(function(line) {
-          return '<div>' + line + '</div>';
-        }).join('');
-        rotatorHtml = '<span class="banner-text-rotator"><span class="banner-text-rotator-inner">' + inner + '</span></span>';
-      }
-      var scrollKeyframes = '';
-      if (textLines.length > 1) {
-        var n = textLines.length;
-        var step = 100 / n;
-        var pause = step * 0.85;
-        var frames = [];
-        for (var fi = 0; fi < n; fi++) {
-          var yPct = (fi * 100 / n).toFixed(1);
-          frames.push((fi * step).toFixed(1) + '%{transform:translateY(-' + yPct + '%)}');
-          frames.push((fi * step + pause).toFixed(1) + '%{transform:translateY(-' + yPct + '%)}');
+
+        if (rotationEffect === 'fade') {
+          var fadeItems = textLines.map(function(line, idx) {
+            var delay = (idx * rotationSpeed / textLines.length).toFixed(1);
+            return '<span class="banner-fade-item" style="animation-delay:' + delay + 's">' + line + '</span>';
+          }).join('');
+          rotatorHtml = '<span class="banner-text-rotator">' + fadeItems + '</span>';
+          var showPct = 100 / textLines.length;
+          var fadeIn = Math.min(8, showPct * 0.15);
+          rotatorCss =
+            '.banner-text-rotator{display:inline-grid;vertical-align:middle;}' +
+            '.banner-fade-item{grid-area:1/1;white-space:nowrap;line-height:1.3;font-size:13px;font-weight:600;opacity:0;animation:bannerFadeItem ' + rotationSpeed + 's ease-in-out infinite}' +
+            '@keyframes bannerFadeItem{0%{opacity:0}' + fadeIn.toFixed(1) + '%{opacity:1}' + (showPct - fadeIn).toFixed(1) + '%{opacity:1}' + showPct.toFixed(1) + '%{opacity:0}100%{opacity:0}}';
+        } else {
+          var inner = textLines.map(function(line) {
+            return '<div>' + line + '</div>';
+          }).join('');
+          rotatorHtml = '<span class="banner-text-rotator"><span class="banner-text-rotator-inner">' + inner + '</span></span>';
+          var scrollKf = '';
+          if (textLines.length > 1) {
+            var n = textLines.length;
+            var step = 100 / n;
+            var pause = step * 0.85;
+            var frames = [];
+            for (var fi = 0; fi < n; fi++) {
+              var yPct = (fi * 100 / n).toFixed(1);
+              frames.push((fi * step).toFixed(1) + '%{transform:translateY(-' + yPct + '%)}');
+              frames.push((fi * step + pause).toFixed(1) + '%{transform:translateY(-' + yPct + '%)}');
+            }
+            frames.push('100%{transform:translateY(0)}');
+            scrollKf = '@keyframes bannerTextScroll{' + frames.join('') + '}';
+          } else {
+            scrollKf = '@keyframes bannerTextScroll{0%,100%{transform:translateY(0)}}';
+          }
+          rotatorCss =
+            '.banner-text-rotator{display:inline-block;vertical-align:middle;overflow:hidden;height:17px;}' +
+            '.banner-text-rotator-inner{display:flex;flex-direction:column;animation:bannerTextScroll ' + rotationSpeed + 's ease-in-out infinite;}' +
+            '.banner-text-rotator-inner div{line-height:1.3;font-size:13px;font-weight:600;}' +
+            scrollKf;
         }
-        frames.push('100%{transform:translateY(0)}');
-        scrollKeyframes = '@keyframes bannerTextScroll{' + frames.join('') + '}';
-      } else {
-        scrollKeyframes = '@keyframes bannerTextScroll{0%,100%{transform:translateY(0)}}';
       }
       var titleHtml = '';
       if (!rotatorHtml) {
@@ -117,10 +139,7 @@
         '.blinkColon{display:inline-block;animation:blink 1.5s infinite}' +
         '.banner-title{font-weight:600;margin-right:2px;}' +
         '.banner-desc{opacity:0.9;}' +
-        '.banner-text-rotator{display:inline-block;vertical-align:middle;overflow:hidden;height:17px;}' +
-        '.banner-text-rotator-inner{display:flex;flex-direction:column;animation:bannerTextScroll ' + rotationSpeed + 's ease-in-out infinite;}' +
-        '.banner-text-rotator-inner div{line-height:1.3;font-size:13px;font-weight:600;}' +
-        scrollKeyframes +
+        rotatorCss +
         '@keyframes blink{0%{opacity:1}50%{opacity:0}100%{opacity:1}}' +
         '@keyframes fadeBlink{0%{opacity:1}50%{opacity:0.4}100%{opacity:1}}'
       ));
