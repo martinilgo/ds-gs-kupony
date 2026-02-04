@@ -5,8 +5,8 @@
     "countdown": true,
     "active": true,
     "bgColors": [
-      "#f5f5f5",
-      "#dcdcdc"
+      "#222222",
+      "#111111"
     ],
     "rotatingText": [
       "Doprava zdarma."
@@ -14,7 +14,7 @@
     "bannerType": "topbar",
     "popupPosition": "bottom-center",
     "bannerStyle": {
-      "textColor": "#505050",
+      "textColor": "#FFFFFF",
       "fontSize": "13px",
       "borderRadius": "0px",
       "height": "auto",
@@ -27,7 +27,7 @@
     "discount": "5,00",
     "discountType": "percent",
     "expiry": "6. 2. 2026",
-    "updatedAt": "2026-02-04T19:12:54.313Z"
+    "updatedAt": "2026-02-04T19:28:35.492Z"
   },
   {
     "title": "Sleva 5% na vše.",
@@ -35,8 +35,8 @@
     "countdown": true,
     "active": true,
     "bgColors": [
-      "#222222",
-      "#111111"
+      "#99cc33",
+      "#7ea924"
     ],
     "rotatingText": [
       "Doprava zdarma."
@@ -57,6 +57,6 @@
     "discount": "5,00",
     "discountType": "percent",
     "expiry": "5. 2. 2026",
-    "updatedAt": "2026-02-04T19:10:19.312Z"
+    "updatedAt": "2026-02-04T19:29:55.464Z"
   }
 ]
