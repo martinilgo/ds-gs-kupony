@@ -71,16 +71,35 @@
 
       var rotatorHtml = '';
       if (textLines.length) {
+        if (banner.title) textLines.unshift(banner.title);
         var inner = textLines.map(function(line) {
           return '<div>' + line + '</div>';
         }).join('');
         rotatorHtml = '<span class="banner-text-rotator"><span class="banner-text-rotator-inner">' + inner + '</span></span>';
       }
+      var scrollKeyframes = '';
+      if (textLines.length > 1) {
+        var n = textLines.length;
+        var step = 100 / n;
+        var pause = step * 0.85;
+        var frames = [];
+        for (var fi = 0; fi < n; fi++) {
+          var yPct = (fi * 100 / n).toFixed(1);
+          frames.push((fi * step).toFixed(1) + '%{transform:translateY(-' + yPct + '%)}');
+          frames.push((fi * step + pause).toFixed(1) + '%{transform:translateY(-' + yPct + '%)}');
+        }
+        frames.push('100%{transform:translateY(0)}');
+        scrollKeyframes = '@keyframes bannerTextScroll{' + frames.join('') + '}';
+      } else {
+        scrollKeyframes = '@keyframes bannerTextScroll{0%,100%{transform:translateY(0)}}';
+      }
       var titleHtml = '';
-      if (banner.title) {
-        titleHtml = '<span class="banner-title">' + banner.title + '</span>';
-      } else if (!rotatorHtml && !banner.text) {
-        titleHtml = '<span class="banner-title">' + (isCz ? 'Sleva pro Vás!' : 'Zľava pre Vás!') + '</span>';
+      if (!rotatorHtml) {
+        if (banner.title) {
+          titleHtml = '<span class="banner-title">' + banner.title + '</span>';
+        } else if (!banner.text) {
+          titleHtml = '<span class="banner-title">' + (isCz ? 'Sleva pro Vás!' : 'Zľava pre Vás!') + '</span>';
+        }
       }
       var descHtml = '';
       if (!rotatorHtml && banner.text) {
@@ -101,7 +120,7 @@
         '.banner-text-rotator{display:inline-block;vertical-align:middle;overflow:hidden;height:17px;}' +
         '.banner-text-rotator-inner{display:flex;flex-direction:column;animation:bannerTextScroll ' + rotationSpeed + 's ease-in-out infinite;}' +
         '.banner-text-rotator-inner div{line-height:1.3;font-size:13px;font-weight:600;}' +
-        '@keyframes bannerTextScroll{0%{transform:translateY(0);}40%{transform:translateY(0);}55%{transform:translateY(-100%);}95%{transform:translateY(-100%);}100%{transform:translateY(0);}}' +
+        scrollKeyframes +
         '@keyframes blink{0%{opacity:1}50%{opacity:0}100%{opacity:1}}' +
         '@keyframes fadeBlink{0%{opacity:1}50%{opacity:0.4}100%{opacity:1}}'
       ));
