@@ -65,15 +65,29 @@
       if (Array.isArray(banner.rotatingText) && banner.rotatingText.length) {
         banner.rotatingText.forEach(function(line) {
           if (line && line.trim()) {
-            textLines.push(line);
+            textLines.push(line.trim());
           }
         });
       }
-
+      var bannerTitle = banner.title ? banner.title.trim() : '';
+      var bannerText = banner.text ? banner.text.trim() : '';
+      if (bannerTitle) {
+        var titlePos = textLines.indexOf(bannerTitle);
+        if (titlePos > -1 && titlePos !== 0) {
+          textLines.splice(titlePos, 1);
+        }
+        if (titlePos !== 0) {
+          textLines.unshift(bannerTitle);
+        }
+      }
+      if (bannerText) {
+        if (textLines.indexOf(bannerText) === -1) {
+          textLines.push(bannerText);
+        }
+      }
       var rotatorHtml = '';
       var rotatorCss = '';
       if (textLines.length) {
-        if (banner.title) textLines.unshift(banner.title);
         var totalDuration = rotationSpeed * textLines.length;
 
         if (rotationEffect === 'fade') {
@@ -136,7 +150,7 @@
         '#promoBannerClose{position:absolute;right:10px;top:6px;cursor:pointer;font-size:18px;color:#fff}' +
         '#promoBanner .coupon{background:#fff;color:#000;padding:2px 6px;border-radius:4px;font-weight:bold;margin-left:5px;cursor:pointer;display:inline-block;font-size:12px}' +
         '#promoBanner .copied{margin-left:6px;font-size:11px;color:#0f0;display:none}' +
-        '#promoCountdown{font-size:11px;color:rgba(255,255,255,0.8);margin-left:10px;animation:fadeBlink 6s ease-in-out infinite}' +
+        '#promoCountdown{font-size:11px;color:' + textColor + ';margin-left:10px;animation:fadeBlink 6s ease-in-out infinite}' +
         '.blinkColon{display:inline-block;animation:blink 1.5s infinite}' +
         '.banner-title{font-weight:600;margin-right:2px;}' +
         '.banner-desc{opacity:0.9;}' +
@@ -208,6 +222,7 @@
         el.style.right = '0';
         el.style.bottom = 'auto';
         el.style.transform = 'none';
+        el.style.borderRadius = '0';
       }
 
       document.body.appendChild(el);
@@ -255,9 +270,9 @@
         var h = Math.floor((diff % 86400000) / 3600000);
         var m = Math.floor((diff % 3600000) / 60000);
         countdownEl.innerHTML =
-          ' (platí ' + d + 'd ' +
+          'Platí ' + d + 'd ' +
           h + '<span class="blinkColon">:</span>' +
-          m + 'm)';
+          m + 'm';
       }
 
       if (banner.countdown && endDate) {
