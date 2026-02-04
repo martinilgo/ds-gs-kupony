@@ -274,10 +274,13 @@
         var h = Math.floor((diff % 86400000) / 3600000);
         var m = Math.floor((diff % 3600000) / 60000);
         var formattedMinutes = String(m).padStart(2, '0');
+        var formattedHours = String(h).padStart(2, '0');
+        var timeLabel = formattedHours + '<span class="blinkColon">:</span>' + formattedMinutes + 'm';
+        if (d > 0) {
+          timeLabel = d + 'd ' + timeLabel;
+        }
         countdownEl.innerHTML =
-          'Platí ' +
-          h + '<span class="blinkColon">:</span>' +
-          formattedMinutes + 'm';
+          'Platí ' + timeLabel;
       }
 
       if (banner.countdown && endDate) {
