@@ -275,10 +275,7 @@
         var m = Math.floor((diff % 3600000) / 60000);
         var formattedMinutes = String(m).padStart(2, '0');
         var formattedHours = String(h).padStart(2, '0');
-        var timeLabel = formattedHours + '<span class="blinkColon">:</span>' + formattedMinutes + 'm';
-        if (d > 0) {
-          timeLabel = d + 'd ' + timeLabel;
-        }
+        var timeLabel = d + 'd ' + formattedHours + '<span class="blinkColon">:</span>' + formattedMinutes + 'm';
         countdownEl.innerHTML =
           'Platí ' + timeLabel;
       }
