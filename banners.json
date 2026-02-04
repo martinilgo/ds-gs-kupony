@@ -27,7 +27,7 @@
     "rotatingText": [
       "Doprava zdarma."
     ],
-    "bannerType": "topbar",
+    "bannerType": "popup",
     "popupPosition": "bottom-center",
     "bannerStyle": {
       "textColor": "#FFFFFF",
@@ -43,6 +43,6 @@
     "discount": "5,00",
     "discountType": "percent",
     "expiry": "5. 2. 2026",
-    "updatedAt": "2026-02-04T17:57:56.090Z"
+    "updatedAt": "2026-02-04T17:59:00.276Z"
   }
 ]
