@@ -19,12 +19,12 @@
       "rotationSpeed": 6,
       "rotationEffect": "fade"
     },
-    "gtmSnippet": "<script src=\"https://raw.githack.com/martinilgo/ds-gs-kupony/main/GTM-banner-custom-html-script-ALL-SHOPS.js\"></script>",
+    "gtmSnippet": "<script src=\"https://cdn.jsdelivr.net/gh/martinilgo/ds-gs-kupony@main/GTM-banner-custom-html-script-ALL-SHOPS.js\"></script>",
     "code": "FLASH5",
     "store": "DesignShop Cz",
     "discount": "5,00",
     "discountType": "percent",
     "expiry": "20. 3. 2026",
-    "updatedAt": "2026-03-17T13:22:22.084Z"
+    "updatedAt": "2026-03-17T13:35:30.027Z"
   }
 ]
