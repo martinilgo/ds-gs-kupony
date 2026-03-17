@@ -9,12 +9,12 @@
       "#111111"
     ],
     "rotatingText": [],
-    "bannerType": "topbar",
+    "bannerType": "popup",
     "popupPosition": "bottom-center",
     "bannerStyle": {
       "textColor": "#FFFFFF",
       "fontSize": "13px",
-      "borderRadius": "0px",
+      "borderRadius": "6px",
       "height": "auto",
       "rotationSpeed": 6,
       "rotationEffect": "fade"
@@ -25,6 +25,6 @@
     "discount": "5,00",
     "discountType": "percent",
     "expiry": "20. 3. 2026",
-    "updatedAt": "2026-03-17T15:05:20.973Z"
+    "updatedAt": "2026-03-17T15:06:04.767Z"
   }
 ]
