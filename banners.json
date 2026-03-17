@@ -1,6 +1,6 @@
 [
   {
-    "title": "Speciální sleva",
+    "title": "Speciální sleva 5%",
     "text": "Využijte slevový kód!",
     "countdown": true,
     "active": true,
@@ -25,6 +25,6 @@
     "discount": "5,00",
     "discountType": "percent",
     "expiry": "20. 3. 2026",
-    "updatedAt": "2026-03-17T14:20:32.202Z"
+    "updatedAt": "2026-03-17T14:21:07.110Z"
   }
 ]
