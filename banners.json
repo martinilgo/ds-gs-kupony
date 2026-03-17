@@ -1,16 +1,14 @@
 [
   {
-    "title": "Sleva 5% na vše.",
-    "text": "",
+    "title": "Speciální sleva - FLASH5",
+    "text": "Využijte zľavový kód při nákupu.",
     "countdown": true,
     "active": true,
     "bgColors": [
       "#222222",
       "#111111"
     ],
-    "rotatingText": [
-      "Doprava zdarma."
-    ],
+    "rotatingText": [],
     "bannerType": "topbar",
     "popupPosition": "bottom-center",
     "bannerStyle": {
@@ -26,7 +24,7 @@
     "store": "DesignShop Cz",
     "discount": "5,00",
     "discountType": "percent",
-    "expiry": "5. 2. 2026",
-    "updatedAt": "2026-02-05T07:47:35.518Z"
+    "expiry": "20. 3. 2026",
+    "updatedAt": "2026-03-17T13:19:45.665Z"
   }
 ]
