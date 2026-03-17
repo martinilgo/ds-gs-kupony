@@ -1,7 +1,7 @@
 [
   {
     "title": "Sleva 5%",
-    "text": "Nakupte výhodně!",
+    "text": "Nakupte výhodně",
     "countdown": true,
     "active": true,
     "bgColors": [
@@ -25,6 +25,6 @@
     "discount": "5,00",
     "discountType": "percent",
     "expiry": "20. 3. 2026",
-    "updatedAt": "2026-03-17T14:52:58.326Z"
+    "updatedAt": "2026-03-17T14:53:25.448Z"
   }
 ]
