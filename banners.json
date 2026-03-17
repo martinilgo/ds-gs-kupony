@@ -1,7 +1,7 @@
 [
   {
     "title": "Speciální sleva - FLASH5",
-    "text": "Využijte slevový kód při nákupu.",
+    "text": "Využijte slevový kód při nákupu",
     "countdown": true,
     "active": true,
     "bgColors": [
@@ -25,6 +25,6 @@
     "discount": "5,00",
     "discountType": "percent",
     "expiry": "20. 3. 2026",
-    "updatedAt": "2026-03-17T13:35:30.027Z"
+    "updatedAt": "2026-03-17T13:35:44.405Z"
   }
 ]
