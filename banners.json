@@ -26,5 +26,33 @@
     "discountType": "percent",
     "expiry": "20. 3. 2026",
     "updatedAt": "2026-03-17T15:30:41.574Z"
+  },
+  {
+    "title": "Zľava 5%",
+    "text": "Doprava zdarma",
+    "countdown": true,
+    "active": true,
+    "bgColors": [
+      "#222222",
+      "#111111"
+    ],
+    "rotatingText": [],
+    "bannerType": "topbar",
+    "popupPosition": "bottom-center",
+    "bannerStyle": {
+      "textColor": "#FFFFFF",
+      "fontSize": "13px",
+      "borderRadius": "0px",
+      "height": "auto",
+      "rotationSpeed": 6,
+      "rotationEffect": "fade"
+    },
+    "gtmSnippet": "<script>\n/* PROMO_BANNER_APPS_SCRIPT_LOADER_V1 */\n(function () {\n  var s = document.createElement('script');\n  s.src = 'https://script.google.com/macros/s/AKfycbw7Ou1LxAG_nrjKKXbPmuICuUzAwnVfbmVP5iaGwsTg5Q5sTJhS1a-z3_MAaLygvul-/exec?mode=render-js&t=' + Date.now();\n  s.async = true;\n  document.head.appendChild(s);\n})();\n</script>",
+    "code": "FLASH5",
+    "store": "DesignShop Sk",
+    "discount": "5,00",
+    "discountType": "percent",
+    "expiry": "20. 3. 2026",
+    "updatedAt": "2026-03-17T15:33:39.458Z"
   }
 ]
