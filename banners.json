@@ -5,8 +5,8 @@
     "countdown": true,
     "active": true,
     "bgColors": [
-      "#C62828",
-      "#7f1d1d"
+      "#222222",
+      "#111111"
     ],
     "rotatingText": [],
     "bannerType": "topbar",
@@ -25,6 +25,6 @@
     "discount": "5,00",
     "discountType": "percent",
     "expiry": "20. 3. 2026",
-    "updatedAt": "2026-03-17T15:04:28.558Z"
+    "updatedAt": "2026-03-17T15:05:20.973Z"
   }
 ]
