@@ -13,6 +13,14 @@
   var JSON_URL = 'https://cdn.jsdelivr.net/gh/martinilgo/ds-gs-kupony@main/banners.json';
   var STORAGE_PREFIX = 'promoBanner_closed_';
 
+  function getBannerStorageKey(banner) {
+    var revision = banner && (banner.updatedAt || banner.expiry || banner.dateTo || 'default');
+    var safeRevision = String(revision).replace(/[^a-zA-Z0-9_-]+/g, '_');
+    var safeStore = String((banner && banner.store) || currentStore || 'store').replace(/[^a-zA-Z0-9_-]+/g, '_');
+    var safeCode = String((banner && banner.code) || 'code').replace(/[^a-zA-Z0-9_-]+/g, '_');
+    return STORAGE_PREFIX + safeStore + '_' + safeCode + '_' + safeRevision;
+  }
+
   fetch(JSON_URL + '?t=' + Date.now())
     .then(function(r){ return r.json(); })
     .then(function(banners){
@@ -24,7 +32,7 @@
         b = banners[i];
         if (!b.active) continue;
         if (b.store !== currentStore) continue;
-        if (localStorage.getItem(STORAGE_PREFIX + b.code)) continue;
+        if (localStorage.getItem(getBannerStorageKey(b))) continue;
         var expirySource = b.dateTo || b.expiry;
         if (expirySource) {
           p = expirySource.replace(/\s/g,'').split('.');
@@ -258,7 +266,7 @@
       function closeBanner(){
         if (el.parentNode) el.parentNode.removeChild(el);
         document.body.style.marginTop = '0px';
-        localStorage.setItem(STORAGE_PREFIX + banner.code, '1');
+        localStorage.setItem(getBannerStorageKey(banner), '1');
       }
 
       document.getElementById('promoBannerClose').onclick = closeBanner;
