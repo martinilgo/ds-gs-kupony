@@ -10,7 +10,7 @@
   if (!currentStore) return;
   var isCz = currentStore.indexOf('Cz') !== -1;
 
-  var JSON_URL = 'https://raw.githubusercontent.com/martinilgo/ds-gs-kupony/main/banners.json';
+  var JSON_URL = 'https://cdn.jsdelivr.net/gh/martinilgo/ds-gs-kupony@main/banners.json';
   var STORAGE_PREFIX = 'promoBanner_closed_';
 
   fetch(JSON_URL + '?t=' + Date.now())
