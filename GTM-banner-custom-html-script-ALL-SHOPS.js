@@ -10,7 +10,7 @@
   if (!currentStore) return;
   var isCz = currentStore.indexOf('Cz') !== -1;
 
-  var JSON_URL = 'https://cdn.jsdelivr.net/gh/martinilgo/ds-gs-kupony@main/banners.json';
+  var JSON_URL = 'https://script.google.com/macros/s/AKfycbw7Ou1LxAG_nrjKKXbPmuICuUzAwnVfbmVP5iaGwsTg5Q5sTJhS1a-z3_MAaLygvul-/exec?mode=banners';
   var STORAGE_PREFIX = 'promoBanner_closed_';
 
   function getBannerStorageKey(banner) {
@@ -23,7 +23,8 @@
 
   fetch(JSON_URL + '?t=' + Date.now())
     .then(function(r){ return r.json(); })
-    .then(function(banners){
+    .then(function(payload){
+      var banners = Array.isArray(payload) ? payload : payload && Array.isArray(payload.banners) ? payload.banners : [];
       if (!Array.isArray(banners) || !banners.length) return;
 
       var banner = null;
