@@ -26,5 +26,33 @@
     "discountType": "percent",
     "expiry": "31. 10. 2026",
     "updatedAt": "2026-10-24T19:45:27.834Z"
+  },
+  {
+    "title": "⚡Flash sleva",
+    "text": "Využite zľavový kód pri nákupe. Platnosť do: 31. 10. 2026",
+    "countdown": true,
+    "active": true,
+    "bgColors": [
+      "#99cc33",
+      "#7ea924"
+    ],
+    "rotatingText": [],
+    "bannerType": "topbar",
+    "popupPosition": "bottom-center",
+    "bannerStyle": {
+      "textColor": "#FFFFFF",
+      "fontSize": "13px",
+      "borderRadius": "0px",
+      "height": "auto",
+      "rotationSpeed": 6,
+      "rotationEffect": "fade"
+    },
+    "gtmSnippet": "<script>\n/* PROMO_BANNER_APPS_SCRIPT_LOADER_V1 */\n(function () {\n  var s = document.createElement('script');\n  s.src = 'https://script.google.com/macros/s/AKfycbw7Ou1LxAG_nrjKKXbPmuICuUzAwnVfbmVP5iaGwsTg5Q5sTJhS1a-z3_MAaLygvul-/exec?mode=render-js&t=' + Date.now();\n  s.async = true;\n  document.head.appendChild(s);\n})();\n</script>",
+    "code": "FLASH10",
+    "store": "DesignShop Cz",
+    "discount": "10,00",
+    "discountType": "percent",
+    "expiry": "31. 10. 2026",
+    "updatedAt": "2026-10-24T19:46:10.599Z"
   }
 ]
