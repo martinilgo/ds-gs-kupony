@@ -83,5 +83,34 @@
     "discountType": "percent",
     "expiry": "27. 11. 2026",
     "updatedAt": "2026-11-25T14:04:24.746Z"
+  },
+  {
+    "title": "BLACK FRIDAY −10 % na všetko do 27. 11",
+    "text": "Využite zľavový kód pri nákupe. Platnosť do: 27. 11. 2026",
+    "codeLabel": "s kódom",
+    "countdown": true,
+    "active": true,
+    "bgColors": [
+      "#222222",
+      "#111111"
+    ],
+    "rotatingText": [],
+    "bannerType": "below-menu",
+    "popupPosition": "bottom-center",
+    "bannerStyle": {
+      "textColor": "#FFFFFF",
+      "fontSize": "13px",
+      "borderRadius": "0px",
+      "height": "auto",
+      "rotationSpeed": 6,
+      "rotationEffect": "fade"
+    },
+    "gtmSnippet": "<script>\n/* PROMO_BANNER_APPS_SCRIPT_LOADER_V1 */\n(function () {\n  var s = document.createElement('script');\n  s.src = 'https://script.google.com/macros/s/AKfycbw7Ou1LxAG_nrjKKXbPmuICuUzAwnVfbmVP5iaGwsTg5Q5sTJhS1a-z3_MAaLygvul-/exec?mode=render-js&t=' + Date.now();\n  s.async = true;\n  document.head.appendChild(s);\n})();\n</script>",
+    "code": "BLKFD",
+    "store": "DesignShop Sk",
+    "discount": "10,00",
+    "discountType": "percent",
+    "expiry": "27. 11. 2026",
+    "updatedAt": "2026-11-25T14:05:59.942Z"
   }
 ]
