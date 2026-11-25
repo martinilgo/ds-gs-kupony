@@ -86,7 +86,7 @@
   },
   {
     "title": "BLACK FRIDAY −10 % na všetko do 27. 11",
-    "text": "Využite zľavový kód pri nákupe. Platnosť do: 27. 11. 2026",
+    "text": "",
     "codeLabel": "s kódom",
     "countdown": true,
     "active": true,
@@ -111,6 +111,6 @@
     "discount": "10,00",
     "discountType": "percent",
     "expiry": "27. 11. 2026",
-    "updatedAt": "2026-11-25T14:05:59.942Z"
+    "updatedAt": "2026-11-25T14:06:12.834Z"
   }
 ]
