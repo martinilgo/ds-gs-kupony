@@ -56,16 +56,18 @@
     "updatedAt": "2026-10-28T08:28:24.885Z"
   },
   {
-    "title": "BLACK FRIDAY -10%",
+    "title": "BLACK FRIDAY −10 %",
     "text": "Platnost do: 27. 11. 2026",
     "codeLabel": "s kódem",
-    "countdown": true,
+    "countdown": false,
     "active": true,
     "bgColors": [
       "#222222",
       "#111111"
     ],
-    "rotatingText": [],
+    "rotatingText": [
+      "Sleva 10 % na celý sortiment"
+    ],
     "bannerType": "below-menu",
     "popupPosition": "bottom-center",
     "bannerStyle": {
@@ -82,6 +84,6 @@
     "discount": "10,00",
     "discountType": "percent",
     "expiry": "27. 11. 2026",
-    "updatedAt": "2026-11-25T13:48:17.827Z"
+    "updatedAt": "2026-11-25T13:56:34.021Z"
   }
 ]
