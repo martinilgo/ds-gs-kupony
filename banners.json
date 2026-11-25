@@ -111,6 +111,37 @@
     "discount": "10,00",
     "discountType": "percent",
     "expiry": "27. 11. 2026",
-    "updatedAt": "2026-11-25T16:37:16.122Z"
+    "updatedAt": "2026-11-25T16:37:34.784Z"
+  },
+  {
+    "title": "BLACK FRIDAY −10 % Zľava",
+    "text": "",
+    "codeLabel": "s kódom",
+    "rotatingText": [],
+    "countdown": false,
+    "active": true,
+    "bgColors": [
+      "#222222",
+      "#111111"
+    ],
+    "bannerType": "product",
+    "popupPosition": "bottom-center",
+    "bannerStyle": {
+      "textColor": "#ffffff",
+      "fontSize": "15px",
+      "height": "auto",
+      "borderRadius": "6px",
+      "rotationEffect": "fade",
+      "rotationSpeed": 6,
+      "productTitleFontSize": "15px",
+      "productSecondaryFontSize": "14px"
+    },
+    "gtmSnippet": "<script>\n/* PROMO_BANNER_APPS_SCRIPT_LOADER_V1 */\n(function () {\n  var s = document.createElement('script');\n  s.src = 'https://script.google.com/macros/s/AKfycbw7Ou1LxAG_nrjKKXbPmuICuUzAwnVfbmVP5iaGwsTg5Q5sTJhS1a-z3_MAaLygvul-/exec?mode=render-js&t=' + Date.now();\n  s.async = true;\n  document.head.appendChild(s);\n})();\n</script>",
+    "code": "BLKFD",
+    "store": "DesignShop Sk",
+    "discount": "10,00",
+    "discountType": "percent",
+    "expiry": "27. 11. 2026",
+    "updatedAt": "2026-11-25T16:37:34.784Z"
   }
 ]
