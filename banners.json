@@ -56,66 +56,6 @@
     "updatedAt": "2026-10-28T08:28:24.885Z"
   },
   {
-    "title": "BLACK FRIDAY −10 % na vše do 27. 11.",
-    "text": "",
-    "codeLabel": "s kódem",
-    "countdown": false,
-    "active": true,
-    "bgColors": [
-      "#222222",
-      "#111111"
-    ],
-    "rotatingText": [],
-    "bannerType": "below-menu",
-    "popupPosition": "bottom-center",
-    "bannerStyle": {
-      "textColor": "#FFFFFF",
-      "fontSize": "13px",
-      "borderRadius": "0px",
-      "height": "auto",
-      "rotationSpeed": 6,
-      "rotationEffect": "fade"
-    },
-    "gtmSnippet": "<script>\n/* PROMO_BANNER_APPS_SCRIPT_LOADER_V1 */\n(function () {\n  var s = document.createElement('script');\n  s.src = 'https://script.google.com/macros/s/AKfycbw7Ou1LxAG_nrjKKXbPmuICuUzAwnVfbmVP5iaGwsTg5Q5sTJhS1a-z3_MAaLygvul-/exec?mode=render-js&t=' + Date.now();\n  s.async = true;\n  document.head.appendChild(s);\n})();\n</script>",
-    "code": "BLKFD",
-    "store": "DesignShop Cz",
-    "discount": "10,00",
-    "discountType": "percent",
-    "expiry": "27. 11. 2026",
-    "updatedAt": "2026-11-25T16:47:01.513Z"
-  },
-  {
-    "title": "BLACK FRIDAY −10 % Sleva",
-    "text": "",
-    "codeLabel": "s kódem",
-    "rotatingText": [],
-    "countdown": true,
-    "active": true,
-    "bgColors": [
-      "#222222",
-      "#111111"
-    ],
-    "bannerType": "product",
-    "popupPosition": "bottom-center",
-    "bannerStyle": {
-      "textColor": "#ffffff",
-      "fontSize": "15px",
-      "height": "auto",
-      "borderRadius": "6px",
-      "rotationEffect": "fade",
-      "rotationSpeed": 6,
-      "productTitleFontSize": "15px",
-      "productSecondaryFontSize": "14px"
-    },
-    "gtmSnippet": "<script>\n/* PROMO_BANNER_APPS_SCRIPT_LOADER_V1 */\n(function () {\n  var s = document.createElement('script');\n  s.src = 'https://script.google.com/macros/s/AKfycbw7Ou1LxAG_nrjKKXbPmuICuUzAwnVfbmVP5iaGwsTg5Q5sTJhS1a-z3_MAaLygvul-/exec?mode=render-js&t=' + Date.now();\n  s.async = true;\n  document.head.appendChild(s);\n})();\n</script>",
-    "code": "BLKFD",
-    "store": "DesignShop Cz",
-    "discount": "10,00",
-    "discountType": "percent",
-    "expiry": "27. 11. 2026",
-    "updatedAt": "2026-11-25T16:47:01.513Z"
-  },
-  {
     "title": "BLACK FRIDAY −10 % na všetko do 27. 11",
     "text": "",
     "codeLabel": "s kódom",
@@ -174,5 +114,65 @@
     "discountType": "percent",
     "expiry": "27. 11. 2026",
     "updatedAt": "2026-11-27T11:09:43.130Z"
+  },
+  {
+    "title": "BLACK FRIDAY −10 % na vše do 27. 11.",
+    "text": "",
+    "codeLabel": "s kódem",
+    "countdown": true,
+    "active": true,
+    "bgColors": [
+      "#222222",
+      "#111111"
+    ],
+    "rotatingText": [],
+    "bannerType": "below-menu",
+    "popupPosition": "bottom-center",
+    "bannerStyle": {
+      "textColor": "#FFFFFF",
+      "fontSize": "13px",
+      "borderRadius": "0px",
+      "height": "auto",
+      "rotationSpeed": 6,
+      "rotationEffect": "fade"
+    },
+    "gtmSnippet": "<script>\n/* PROMO_BANNER_APPS_SCRIPT_LOADER_V1 */\n(function () {\n  var s = document.createElement('script');\n  s.src = 'https://script.google.com/macros/s/AKfycbw7Ou1LxAG_nrjKKXbPmuICuUzAwnVfbmVP5iaGwsTg5Q5sTJhS1a-z3_MAaLygvul-/exec?mode=render-js&t=' + Date.now();\n  s.async = true;\n  document.head.appendChild(s);\n})();\n</script>",
+    "code": "BLKFD",
+    "store": "DesignShop Cz",
+    "discount": "10,00",
+    "discountType": "percent",
+    "expiry": "27. 11. 2026",
+    "updatedAt": "2026-11-27T11:10:03.267Z"
+  },
+  {
+    "title": "BLACK FRIDAY −10 % Sleva",
+    "text": "",
+    "codeLabel": "s kódem",
+    "rotatingText": [],
+    "countdown": true,
+    "active": true,
+    "bgColors": [
+      "#222222",
+      "#111111"
+    ],
+    "bannerType": "product",
+    "popupPosition": "bottom-center",
+    "bannerStyle": {
+      "textColor": "#ffffff",
+      "fontSize": "15px",
+      "height": "auto",
+      "borderRadius": "6px",
+      "rotationEffect": "fade",
+      "rotationSpeed": 6,
+      "productTitleFontSize": "15px",
+      "productSecondaryFontSize": "14px"
+    },
+    "gtmSnippet": "<script>\n/* PROMO_BANNER_APPS_SCRIPT_LOADER_V1 */\n(function () {\n  var s = document.createElement('script');\n  s.src = 'https://script.google.com/macros/s/AKfycbw7Ou1LxAG_nrjKKXbPmuICuUzAwnVfbmVP5iaGwsTg5Q5sTJhS1a-z3_MAaLygvul-/exec?mode=render-js&t=' + Date.now();\n  s.async = true;\n  document.head.appendChild(s);\n})();\n</script>",
+    "code": "BLKFD",
+    "store": "DesignShop Cz",
+    "discount": "10,00",
+    "discountType": "percent",
+    "expiry": "27. 11. 2026",
+    "updatedAt": "2026-11-27T11:10:03.267Z"
   }
 ]
