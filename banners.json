@@ -119,7 +119,7 @@
     "title": "BLACK FRIDAY −10 % na všetko do 27. 11",
     "text": "",
     "codeLabel": "s kódom",
-    "countdown": false,
+    "countdown": true,
     "active": true,
     "bgColors": [
       "#222222",
@@ -142,7 +142,7 @@
     "discount": "10,00",
     "discountType": "percent",
     "expiry": "27. 11. 2026",
-    "updatedAt": "2026-11-26T09:34:19.999Z"
+    "updatedAt": "2026-11-27T11:09:43.130Z"
   },
   {
     "title": "BLACK FRIDAY −10 % Zľava",
@@ -173,6 +173,6 @@
     "discount": "10,00",
     "discountType": "percent",
     "expiry": "27. 11. 2026",
-    "updatedAt": "2026-11-26T09:34:19.999Z"
+    "updatedAt": "2026-11-27T11:09:43.130Z"
   }
 ]
